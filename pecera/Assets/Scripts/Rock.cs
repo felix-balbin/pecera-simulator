@@ -13,7 +13,7 @@ public class Rock : MonoBehaviour
         limitesPantalla = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
 
         //Tamano
-        float tamanoAleatorio = Random.Range(0.5f, 1.5f);
+        float tamanoAleatorio = Random.Range(1f, 2.5f);
         tamano = tamanoAleatorio;
         transform.localScale = new Vector3(tamanoAleatorio, tamanoAleatorio, tamanoAleatorio);
     }
@@ -21,6 +21,6 @@ public class Rock : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (transform.position.y <= -limitesPantalla.y - 2 || transform.position.y > limitesPantalla.y + 2) { Destroy(gameObject); }
+        if (transform.position.y <= -limitesPantalla.y + 1.5f || transform.position.y > limitesPantalla.y + 2) { Destroy(gameObject); }
     }
 }

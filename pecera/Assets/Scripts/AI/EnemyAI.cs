@@ -24,7 +24,7 @@ public class EnemyAI : MonoBehaviour
         //Detecting Player and Obstacles around
         InvokeRepeating("PerformDetection", 0, detectionDelay);
         //Tamano
-        float tamanoAleatorio = Random.Range(0.3f, 2f);
+        float tamanoAleatorio = Random.Range(1.5f, 4f);
         tamano = tamanoAleatorio;
         transform.localScale = new Vector3(tamanoAleatorio, tamanoAleatorio, tamanoAleatorio);
     
